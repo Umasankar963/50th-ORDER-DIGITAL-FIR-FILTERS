@@ -1,3 +1,4 @@
+
 `timescale 1ns / 1ps
 
 
@@ -20,8 +21,10 @@ clk_wiz_0 instance_ila_clk
     .clk_out1(clk_out1),     // output clk_out1 100Mhz
     .clk_out2(clk_out2),     // output clk_out2 50Mhz
    // Clock in ports
-    .clk_in1(clk_i));
-    
+    .clk_in1(clk_i)
+   );
+
+	
     // ROM interface module supplies x_in
     rom_interface rom_inst (
         .clk(clk_out2),
@@ -30,6 +33,7 @@ clk_wiz_0 instance_ila_clk
         .valid_input_o(valid_input_o_t)
     );
 
+	
     // FIR filter with 51 taps
     fir_highpass_51 fir_inst (
         .clk(clk_out2),
@@ -42,8 +46,6 @@ clk_wiz_0 instance_ila_clk
     
 ila_0 instance_lpf (
 	.clk(clk_out1), // input wire clk
-
-
 	.probe0(rst_i), // input wire [0:0]  probe0  
 	.probe1(x_in_t), // input wire [15:0]  probe1 
 	.probe2(y_out_t), // input wire [38:0]  probe2
@@ -51,5 +53,6 @@ ila_0 instance_lpf (
 	.probe4(valid_input_o_t) // input wire [0:0]  probe4
 );
 
-
+	
 endmodule
+
