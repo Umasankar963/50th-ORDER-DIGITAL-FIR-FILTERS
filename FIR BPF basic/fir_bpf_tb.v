@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
@@ -18,13 +13,6 @@
 //               and apply them to FIR Band Pass Filter
 //               Bandpass Spec: Fc1=41 kHz, Fc2=61 kHz, F0=50 KHz, Fs=1 MHz
 //////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
 
 
 //`timescale 1ns/1ps
@@ -101,35 +89,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `timescale 1ns / 1ps
 
 module tb_fir_bandpass_51;
@@ -180,3 +139,4 @@ module tb_fir_bandpass_51;
     end     
 
 endmodule
+
