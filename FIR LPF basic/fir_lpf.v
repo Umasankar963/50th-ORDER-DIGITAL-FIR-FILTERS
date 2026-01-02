@@ -1,10 +1,5 @@
 
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
 // 
@@ -14,20 +9,13 @@
 // Project Name : Digital FIR Filters 
 // Target Devices : Artix-7
 // Tool Versions : Vivado 2022.2 
-// Description : Low Pass Filter designed for COMPLETE blocking above 50kHz
+// Description : Low Pass Filter
 //               Input: 20kHz, 40kHz, 50kHz (PASS) | 60kHz, 80kHz, 100kHz (ELIMINATE)
-//////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////////////////////////////////
 
 
 `timescale 1ns / 1ps
+
 
 module fir_lowpass_51 #(
     parameter N = 51,                    
@@ -69,7 +57,7 @@ initial begin
     h[22] = 16'sd2715;
     h[23] = 16'sd3013;
     h[24] = 16'sd3203;
-    h[25] = 16'sd3269;
+    h[25] = 16'sd3269;        // Center Tap
     h[26] = 16'sd3203;
     h[27] = 16'sd3013;
     h[28] = 16'sd2715;
@@ -96,7 +84,6 @@ initial begin
     h[49] = 16'sd34;
     h[50] = 16'sd33;
 end
-
 
 
     // Input sample buffer
@@ -133,3 +120,4 @@ end
     end
 
 endmodule
+
