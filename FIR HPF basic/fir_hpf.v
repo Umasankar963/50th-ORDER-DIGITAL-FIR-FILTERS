@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
@@ -14,18 +9,10 @@
 // Project Name : Digital FIR Filters 
 // Target Devices : Artix-7
 // Tool Versions : Vivado 2022.2 
-// Description : MAXIMUM ATTENUATION High Pass Filter
+// Description : High Pass Filter
 //               Designed for COMPLETE blocking below 50kHz
 //               Input: 20kHz, 40kHz (ELIMINATE) | 50kHz, 60kHz, 80kHz, 100kHz (PASS)
 //////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
 
 `timescale 1ns / 1ps
 
@@ -70,7 +57,7 @@ initial begin
     h[22] = -16'sd2599;
     h[23] = -16'sd2965;
     h[24] = -16'sd3204;
-    h[25] = 16'sd29480;
+    h[25] = 16'sd29480;          // Center Tap
     h[26] = -16'sd3204;
     h[27] = -16'sd2965;
     h[28] = -16'sd2599;
@@ -133,3 +120,4 @@ end
     end
 
 endmodule
+
