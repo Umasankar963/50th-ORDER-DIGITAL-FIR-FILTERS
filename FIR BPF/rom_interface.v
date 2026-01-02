@@ -1,3 +1,4 @@
+
 `timescale 1ns / 1ps
 module rom_interface  #(          
     parameter NUM_SAMPLES = 5500          
@@ -8,9 +9,8 @@ module rom_interface  #(
     output reg valid_input_o
 );
     reg [15:0] rom [0:11416-1];
-    reg [13:0] addr; // Address index (enough for 2500 samples)
-    //reg signed [15:0] xx_out;
-    // Initialize ROM from external file (synthesizable for Vivado)
+    reg [13:0] addr;               // Address index (enough for 2500 samples)
+
     initial begin
         $readmemh("input_samples.mem", rom);
     end
@@ -31,3 +31,4 @@ module rom_interface  #(
         end
     end
 endmodule
+
