@@ -9,7 +9,7 @@
 // Project Name : Digital FIR Filters 
 // Target Devices : Artix-7
 // Tool Versions : Vivado 2022.2 
-// Description : Testbench to read 11416 input samples from "sine_wave_data.mem" 
+// Description : Testbench to read 5500 input samples from "sine_wave_data.mem" 
 //               and apply them to FIR High Pass Filter
 //////////////////////////////////////////////////////////////////////////////////
 
