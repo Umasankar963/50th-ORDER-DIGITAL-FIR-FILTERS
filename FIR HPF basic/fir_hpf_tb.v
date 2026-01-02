@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
@@ -17,11 +12,6 @@
 // Description : Testbench to read 11416 input samples from "sine_wave_data.mem" 
 //               and apply them to FIR High Pass Filter
 //////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 
 
@@ -96,8 +86,6 @@
 
 
 
-
-
 `timescale 1ns / 1ps
 
 module tb_fir_highpass_51;
@@ -148,3 +136,4 @@ module tb_fir_highpass_51;
     end     
 
 endmodule
+
