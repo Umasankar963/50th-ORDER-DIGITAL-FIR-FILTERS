@@ -1,18 +1,16 @@
 
-//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
 // 
 // Create Date : 14.09.2025 17:30:00
 // Design Name : 51 tap Digital High Pass Filter 
-// Module Name: fir_highpass_51
 // Project Name : Digital FIR Filters 
 // Target Devices : Artix-7
 // Tool Versions : Vivado 2022.2 
-// Description : MAXIMUM ATTENUATION High Pass Filter
-//               Designed for COMPLETE blocking above 50kHz
+// Description : Low Pass Filter
 //               Input: 20kHz, 40kHz  50kHz (PASS) | 60kHz, 80kHz, 100kHz (ELIMINATE)
-//////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 
 `timescale 1ns / 1ps
@@ -88,7 +86,6 @@ initial begin
 end
 
 
-
     // Input sample buffer
     reg signed [DATA_WIDTH-1:0] x_buffer [0:N-1];
     
@@ -125,3 +122,4 @@ end
     end
 
 endmodule
+
