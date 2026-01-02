@@ -1,36 +1,16 @@
 
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Name : Uma Sankar Gutta
 // Engineer : AMS Design Engineer 
 // 
 // Create Date : 14.09.2025 17:30:00
-// Design Name : 51 tap Digital High Pass Filter 
-// Module Name: fir_highpass_51
+// Design Name : 51 tap Digital Band Pass Filter 
 // Project Name : Digital FIR Filters 
 // Target Devices : Artix-7
 // Tool Versions : Vivado 2022.2 
-// Description : MAXIMUM ATTENUATION High Pass Filter
-//               Designed for COMPLETE blocking below 50kHz
-//               Input: 20kHz, 40kHz (ELIMINATE) | 50kHz, 60kHz, 80kHz, 100kHz (PASS)
-//////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
+// Description : Band Pass Filter
+//               Input: 20kHz, (ELIMINATE) | 40kHz, 50kHz, 60kHz (PASS) | 80kHz, 100kHz (ELIMINATE)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 `timescale 1ns / 1ps
@@ -59,7 +39,7 @@ initial begin
         h[12] =  16'sd41;    h[13] =  16'sd42;   h[14] =  16'sd39;   h[15] =  16'sd31;
         h[16] =  16'sd18;    h[17] =  16'sd0;    h[18] = -16'sd21;   h[19] = -16'sd44;
         h[20] = -16'sd66;    h[21] = -16'sd83;   h[22] = -16'sd94;   h[23] = -16'sd96;
-        h[24] = -16'sd88;    h[25] =  16'sd0;    // center tap
+        h[24] = -16'sd88;    h[25] =  16'sd0;        // Center Tap
         h[26] =  16'sd88;    h[27] =  16'sd96;   h[28] =  16'sd94;   h[29] =  16'sd83;
         h[30] =  16'sd66;    h[31] =  16'sd44;   h[32] =  16'sd21;   h[33] =  16'sd0;
         h[34] = -16'sd18;    h[35] = -16'sd31;   h[36] = -16'sd39;   h[37] = -16'sd42;
@@ -69,9 +49,7 @@ initial begin
         h[50] =  16'sd0;
 end
 
-
-
-
+    
     // Input sample buffer
     reg signed [DATA_WIDTH-1:0] x_buffer [0:N-1];
     
@@ -108,14 +86,4 @@ end
     end
 
 endmodule
-
-
-
-
-
-
-
-
-
-
 
